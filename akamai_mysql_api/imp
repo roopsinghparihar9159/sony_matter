@@ -1,0 +1,114 @@
+ bitbucket app password: ATBBQ5tJ2LRhsqAyuH5VTwkNQfn5C8EC5BA1
+ 
+ 
+ big bucket :roopsingh_parihar
+Roopsingh@1234
+
+gitlab:roopsingh.p@multitvsolution.com
+pass:Roop@12345
+
+
+akamai: roopsingh.p@multitvsolution.com
+pass: Akamai@123
+
+
+local machine
+-----------------
+mysql : root
+password: Password123#@!
+--------------------------------
+
+on server
+------------------------------
+Mysql Login
+103.253.175.26
+user: api
+pass: akamai@MTV
+--------------------------------
+
+IP: 103.253.175.26
+user: roopsingh
+pass: Roopsingh@123
+ssh 103.253.175.26@roopsingh
+---------------------------------------
+
+background run machine command: nohup python3 get_group_api.py &
+
+nano file_name
+control + o enter
+control + x
+
+
+ps ax | grep python3 process kill command
+kill 163491
+----------------------------------
+
+https://akamai-be.multitvsolution.com:5000/get_group_list
+
+
+
+------------------------
+#for certificate generate
+sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout mycert.key -out mycert.pem
+
+#for file permission
+chmod a+r mycert.key 
+
+--------------------------------------------
+rai login access
+-------------------------------------------
+https://lookerstudio.google.com/u/0/reporting/85e4a909-b27a-4404-a0ec-10aaf394bee6/page/eObqB
+
+pass :MultiTv@2023
+email_id: videooperations@multitvsolution.com
+
+
+godavari access
+---------------------------------------------------
+aws login 
+https://sonyliv.awsapps.com/start#/
+
+Username/Email:   videooperations
+Password:         Cyberlinks@021
+---------------------------------------------------
+
+https://confluence.sonyliv.com/pages/viewpage.action?spaceKey=VM&title=Daily+Tracking+Report+Sept-Oct%2C2021
+username:videooperations
+password:MultitV@209
+
+--------------------------------------------------------------------------------
+cyberark credienatials 
+
+login name: roopsingh.p@sonyliv.com
+password : Cyberark@123
+
+
+
+------------------------------------------------
+wifi name: NOC_5_GHZ
+wifi PASS:MTV@2023
+--------------------------------------------
+
+roopsingh.p@sonyliv.com@sl2user@172.27.2.79@cyberarcnlb-dev-449a4649693af027.elb.ap-south-1.amazonaws.com:54321
+
+dashboard link: https://acd0d90c-f9cb-43e0-a6f4-c9a4df538ebc-gw.gateway.id.cyberark.cloud/
+
+https://sonylivworkspace.slack.com/
+----------------------------------------------------------------------------------------------
+openvpn credietials
+
+Please find OpenVPN credentials below. Please check and confirm.
+
+TCS Preprod
+SonyLIV-v2-preprod#020627682009
+https://vpnapiv2-preprod.sonyliv.com 
+Username:roopsingh.p@multitvsolution.com
+Password:GC@fX7\l630P1
+
+------------------------------------------------------------------------------------------------
+sreops dashboards 
+
+http://sreops.sonyliv.com/
+http://3.108.8.77/raianalysis/
+-------------------------------------------------------------------------
+
