@@ -1,0 +1,122 @@
+
+
+{% extends 'layout.html' %}
+{% block body %}
+  <h3 class='text-center text-muted mb-3'>Flask - SQLite CRUD Application</h3>
+  <p class='text-right'><a href='{{url_for("add_user")}}' class='btn btn-success '>+Add User</a></p>
+  <table class='table table-bordered'>
+    <thead>
+      <th>SNo</th>
+      <th>Name</th>
+      <th>Contact</th>
+      <th>Address</th>
+      <th>Pincode</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </thead>
+    <tbody>
+      {% for row in rows %}
+        <tr>
+          <td>{{loop.index}}</td>
+          <td>{{row.NAME}}</td>
+          <td>{{row.CONTACT}}</td>
+          <td>{{row.ADDRESS}}</td>
+          <td>{{row.PINCODE}}</td>
+          <td><a href='{{url_for("edit_user",id=row.ID)}}' class='btn btn-primary'>Edit</a></td>
+          <td><a href='{{url_for("delete_user",id=row.ID)}}' class='btn btn-danger' onclick='return confirm("Are You Sure")'>Delete</a></td>
+        </tr>
+      {%endfor%}
+    </tbody>
+  </table>
+
+  <!-- <div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            <h2>User list using ajax</h2>
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col-sm-6">
+            <table id="productTable" class="table table-bordered table-condensed table-striped">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Contact</th>
+                        <th>Address</th>
+                        <th>Pincode</th>
+                        <th colspan="2">Action</th>
+                        
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function () {
+        $.ajax({    
+        type: "GET",
+        url: "http://127.0.0.1:5000/api",                              
+        success: function(data){  
+            
+            if ($("#productTable tbody").length == 0) {
+            $("#productTable").append("<tbody></tbody>");
+            }
+            // for (var j = 0; j < data.length; j++){
+            //     console.log(data[j].id);
+            //     console.log(data[j].name);
+            //     var body = "<tr>";
+            //     body += "<td>" + data[j].name + "</td>";
+            //     body += "<td>" + data[j].contact + "</td>";
+            //     body += "<td>" + data[j].address + "</td>";
+            //     body += "<td>" + data[j].pincode + "</td>";
+            //     body += "</tr>";
+            //     // var body = "<tr><td>" + data[j].name + "</td><td>"+ data[j].contact + "</td><td>"+ data[j].address + "</td><td>"+ data[j].pincode + "</td></tr>";
+                
+                
+            //     $('#productTable tbody').append(body);
+            // } 
+                let rows =  '';
+                data.forEach(user => {
+                    // console.log(user.name)
+                    rows += `
+                        <tr>
+                            <td>${user.name}</td>
+                            <td>${user.contact}</td>
+                            <td>${user.address}</td>
+                            <td>${user.pincode}</td>
+                            <td>
+                                <button class="btn btn-warning updateBtn" data-id="${user.id}">Update</button>
+                            </td>
+                            <td>
+                                <button class="btn btn-danger deleteBtn" data-id="${user.id}">Delete</button>
+                            </td>
+                        </tr>`;
+                }); 
+                $('#productTable tbody').append(rows);
+                $('.deleteBtn').each((i, elm) => {
+                $(elm).on("click",  (e) => {
+                    deleteUser($(elm))
+                })
+            })
+        }
+        
+    });
+    });
+
+    function  deleteUser(el){
+        userId  =  $(el).data('id')
+        $.ajax({
+            url:  `/delete/api/${userId}`,
+            type:  'post',
+            dataType:  'json',
+            success:  function (data) {
+                console.log(data)
+                $(el).parents()[1].remove()
+            }
+        });
+    }
+</script> -->
+{% endblock %}
+
