@@ -1,0 +1,7 @@
+boto3==1.24.90
+bjoern==3.2.2
+botocore==1.27.90
+urllib3==1.26.5
+Paste==3.5.2
+awscli==1.25.91
+PyMySQL==1.0.2

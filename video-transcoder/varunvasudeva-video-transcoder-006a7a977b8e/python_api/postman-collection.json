@@ -1,0 +1,91 @@
+{
+	"info": {
+		"_postman_id": "6915309c-99a0-475d-a984-0d416b5a9ad4",
+		"name": "rtmp-relay",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19011953"
+	},
+	"item": [
+		{
+			"name": "start",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "streamkey",
+							"value": "tenmin",
+							"type": "text"
+						},
+						{
+							"key": "type",
+							"value": "custom",
+							"description": "Can be custom/fb/Youtube",
+							"type": "text"
+						},
+						{
+							"key": "publishing_url",
+							"value": "rtmp://103.253.175.239/live/key1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://b-rtmp.multitvsolution.com/start",
+					"protocol": "https",
+					"host": [
+						"b-rtmp",
+						"multitvsolution",
+						"com"
+					],
+					"path": [
+						"start"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "stop",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "streamkey",
+							"value": "tenmin",
+							"type": "text"
+						},
+						{
+							"key": "type",
+							"value": "custom",
+							"type": "text"
+						},
+						{
+							"key": "jobid",
+							"value": "1679325491",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://b-rtmp.multitvsolution.com/stop",
+					"protocol": "https",
+					"host": [
+						"b-rtmp",
+						"multitvsolution",
+						"com"
+					],
+					"path": [
+						"stop"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,262 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-6">
+            <h1>User Form</h1>
+            <form id="id_form">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Name</label>
+                  <input type="text" class="form-control" id="id_name" placeholder="Enter Name">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Contact</label>
+                  <input type="text" class="form-control" id="id_contact" placeholder="contact">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Address</label>
+                    <input type="text" class="form-control" id="id_address" placeholder="contact">
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+        </div>
+        
+        <div class="col-6">
+            <h1>User Record</h1>
+            <table id="productTable" class="table table-bordered table-condensed table-striped">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Contact</th>
+                        <th>Address</th>
+                        <th colspan="2">Action</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        
+    </div>
+</div>
+
+<!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    Launch demo modal
+  </button> -->
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Update Form</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form id="id_form_model">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Id</label>
+                    <input type="text" class="form-control" id="id_userid_model" placeholder="Enter User Id" disabled>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Name</label>
+                  <input type="text" class="form-control" id="id_name_model" placeholder="Enter Name">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Contact</label>
+                  <input type="text" class="form-control" id="id_contact_model" placeholder="contact">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Address</label>
+                    <input type="text" class="form-control" id="id_address_model" placeholder="Address">
+                </div>
+                
+                <button type="submit" class="btn btn-warning">Update</button>
+              </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+<script>
+    function showtabledata(){
+        
+            $.ajax({    
+            type: "GET",
+            url: "http://127.0.0.1:5000/all_user",                              
+            success: function(data){  
+                $('#myTableId tbody').empty();
+                if ($("#productTable tbody").length == 0) {
+                $("#productTable").append("<tbody></tbody>");
+                }
+                    let rows =  '';
+                    data.forEach(user => {
+                        // console.log(user.name)
+                        
+                        rows += `
+                            <tr>
+                                <td>${user.name}</td>
+                                <td>${user.contact}</td>
+                                <td>${user.address}</td>
+                                <td>
+                                    <button class="btn  updateBtn" data-id="${user.id}" data-toggle="modal" data-target="#exampleModal" ><i class="fas fa-pen"></i></button>
+                                </td>
+                                <td>
+                                    <button class="btn btn-danger deleteBtn" data-id="${user.id}"><i class="far fa-trash-alt"></i></button>
+                                </td>
+                            </tr>`;
+                    }); 
+                    $('#myTableId tbody').empty();
+                    $('#productTable tbody').append(rows);
+                    $('.deleteBtn').each((i, elm) => {
+                        $(elm).on("click",  (e) => {
+                            deleteUser($(elm))
+                        }); 
+                    })
+
+                    $('.updateBtn').each((i, elm) => {
+                    $(elm).on("click",  (e) => {
+                        UpdateUser($(elm))
+                    })
+                })
+            }
+            
+        });
+
+        }
+
+    function UpdateUser(el){
+        userId  =  $(el).data('id')
+        $.ajax({
+            url: `/edit_user/api/${userId}`,
+            type:  'post',
+            dataType:  'json',
+            success:  function (data) {debugger
+                
+                // console.log(data)
+                // keys = Object.keys(data[1])
+                // console.log(keys)
+                $('#id_userid_model').val(data[1].ID),
+                $('#id_name_model').val(data[1].NAME),
+                $('#id_contact_model').val(data[1].CONTACT),
+                $('#id_address_model').val(data[1].ADDRESS)
+            }
+        });
+    }
+        
+    function  deleteUser(el){
+            userId  =  $(el).data('id')
+            $.ajax({
+                url:  `/delete/api/${userId}`,
+                type:  'post',
+                dataType:  'json',
+                success:  function (data) {
+                    // console.log(data)
+                    $(el).parents()[1].remove()
+                    Swal.fire({
+                        position: 'top-center',
+                        icon: 'success',
+                        title: 'User deleted Successfully....',
+                        showConfirmButton: false,
+                        timer: 1500
+                        })
+                }
+            });
+    }
+
+
+    $('#id_form_model').on('submit',function (e) {
+        e.preventDefault();
+        // data={
+        //   name:$('#id_name').val(),
+        //   contact:$('#id_contact').val(),
+        //   address:$('#id_address').val()
+        // },
+        // console.log(data)
+        $.ajax({
+          url: 'http://127.0.0.1:5000/update_user/api',
+          data: {
+            id:$('#id_userid_model').val(),
+            name:$('#id_name_model').val(),
+            contact:$('#id_contact_model').val(),
+            address:$('#id_address_model').val()
+            },
+          type: 'POST',
+          dataType: 'json',
+          success: function(response){//debugger
+            $('#id_form_model').trigger("reset");
+            // $('#exampleModal').hide()
+            $('#exampleModal').modal('hide');
+              console.log(response);
+              showtabledata()
+          },
+          error: function(error){
+              console.log(error);
+          }
+        });
+
+      });
+
+
+
+
+
+
+
+
+
+    $(document).ready(function(){
+        
+        showtabledata()
+    });
+      $('#id_form').on('submit',function (e) {
+        e.preventDefault();
+        // data={
+        //   name:$('#id_name').val(),
+        //   contact:$('#id_contact').val(),
+        //   address:$('#id_address').val()
+        // },
+        // console.log(data)
+        $.ajax({
+          url: 'http://127.0.0.1:5000/add_user',
+          data: {
+            name:$('#id_name').val(),
+            contact:$('#id_contact').val(),
+            address:$('#id_address').val()
+            },
+          type: 'POST',
+          dataType: 'json',
+          success: function(response){//debugger
+            $('#id_form').trigger("reset");
+              console.log(response);
+              
+              showtabledata()
+              Swal.fire({
+                        position: 'top-center',
+                        icon: 'success',
+                        title: 'Your work has been saved',
+                        showConfirmButton: false,
+                        timer: 1500
+                        })
+          },
+          error: function(error){
+              console.log(error);
+          }
+        });
+
+      });
+      
+    
+    
+  </script>
+{% endblock %}

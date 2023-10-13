@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<?xml-stylesheet type="text/xsl" href="stat.xsl" ?>
+<rtmp>
+<nginx_version>1.20.2</nginx_version>
+<nginx_rtmp_version>1.1.4</nginx_rtmp_version>
+<compiler>gcc 9.4.0 (Ubuntu 9.4.0-1ubuntu1~20.04.1) </compiler>
+<built>Mar 24 2022 16:28:38</built>
+<pid>448816</pid>
+<uptime>18727753</uptime>
+<naccepted>1013087</naccepted>
+<bw_in>45002024</bw_in>
+<bytes_in>27975734168275</bytes_in>
+<bw_out>117879816</bw_out>
+<bytes_out>60936047865658</bytes_out>
+<server>
+<application>
+<name>live</name>
+<live>
+<stream>
+<name>IPR_ONE</name>
+<time>35736</time><bw_in>0</bw_in>
+<bytes_in>0</bytes_in>
+<bw_out>0</bw_out>
+<bytes_out>0</bytes_out>
+<bw_audio>0</bw_audio>
+<bw_video>0</bw_video>
+<client><id>1045394</id><address>49.249.119.220</address><time>36044</time><flashver>LNX 9,0,124,2</flashver><dropped>0</dropped><avsync>0</avsync><timestamp>0</timestamp></client>
+<nclients>1</nclients>
+</stream>
+<stream>
+<name>AUS_ONE</name>
+<time>27790983</time><bw_in>9767288</bw_in>
+<bytes_in>30628144248</bytes_in>
+<bw_out>29301864</bw_out>
+<bytes_out>91213595038</bytes_out>
+<bw_audio>137248</bw_audio>
+<bw_video>9630032</bw_video>
+<client><id>1045274</id><address>49.249.119.220</address><time>1919123</time><flashver>LNX 9,0,124,2</flashver><dropped>0</dropped><avsync>10</avsync><timestamp>35079664</timestamp><active/></client>
+<client><id>1045258</id><address>49.249.119.212</address><time>2211927</time><dropped>0</dropped><avsync>10</avsync><timestamp>35079664</timestamp><active/></client>
+<client><id>1044104</id><address>49.249.119.211</address><time>27740379</time><dropped>0</dropped><avsync>10</avsync><timestamp>35079664</timestamp><active/></client>
+<client><id>1044101</id><address>172.105.39.139</address><time>27773707</time><flashver>FMLE/3.0 (compatible; Lavf56.40</flashver><dropped>0</dropped><avsync>10</avsync><timestamp>35079664</timestamp><publishing/><active/></client>
+<meta><video><width>1920</width><height>1080</height><frame_rate>50</frame_rate><codec>H264</codec><profile>High</profile><compat>0</compat><level>4.2</level></video><audio><codec>AAC</codec><profile>LC</profile><channels>2</channels><sample_rate>44100</sample_rate></audio></meta>
+<nclients>4</nclients>
+<publishing/>
+<active/>
+</stream>
+<stream>
+<name>GIC_ONE</name>
+<time>34076</time><bw_in>0</bw_in>
+<bytes_in>0</bytes_in>
+<bw_out>0</bw_out>
+<bytes_out>0</bytes_out>
+<bw_audio>0</bw_audio>
+<bw_video>0</bw_video>
+<client><id>1045395</id><address>49.249.119.220</address><time>34356</time><flashver>LNX 9,0,124,2</flashver><dropped>0</dropped><avsync>0</avsync><timestamp>0</timestamp></client>
+<nclients>1</nclients>
+</stream>
+<stream>
+<name>FailoverTest</name>
+<time>77800</time><bw_in>365496</bw_in>
+<bytes_in>4815559</bytes_in>
+<bw_out>0</bw_out>
+<bytes_out>0</bytes_out>
+<bw_audio>53696</bw_audio>
+<bw_video>311800</bw_video>
+<client><id>1045387</id><address>122.176.117.232</address><time>78080</time><flashver>FMLE/3.0 (compatible; Larix/nul</flashver><dropped>0</dropped><avsync>-11</avsync><timestamp>78572</timestamp><publishing/><active/></client>
+<meta><video><width>1920</width><height>1080</height><frame_rate>0</frame_rate><codec>H264</codec><profile>High</profile><compat>0</compat><level>4.0</level></video><audio><codec>AAC</codec><profile>LC</profile><channels>1</channels><sample_rate>44100</sample_rate></audio></meta>
+<nclients>1</nclients>
+<publishing/>
+<active/>
+</stream>
+<stream>
+<name>AFG_ONE</name>
+<time>20266500</time><bw_in>4473192</bw_in>
+<bytes_in>11550723403</bytes_in>
+<bw_out>17892784</bw_out>
+<bytes_out>45515896318</bytes_out>
+<bw_audio>142336</bw_audio>
+<bw_video>4330856</bw_video>
+<client><id>1045257</id><address>49.249.119.212</address><time>2212035</time><dropped>0</dropped><avsync>-5</avsync><timestamp>35080010</timestamp><active/></client>
+<client><id>1044971</id><address>49.249.119.220</address><time>7406526</time><flashver>LNX 9,0,124,2</flashver><dropped>0</dropped><avsync>-5</avsync><timestamp>35080010</timestamp><active/></client>
+<client><id>1044707</id><address>49.249.119.220</address><time>12076858</time><flashver>LNX 9,0,124,2</flashver><dropped>0</dropped><avsync>-5</avsync><timestamp>35080010</timestamp><active/></client>
+<client><id>1044340</id><address>49.249.119.211</address><time>19567088</time><dropped>0</dropped><avsync>-5</avsync><timestamp>35080010</timestamp><active/></client>
+<client><id>1044320</id><address>172.105.41.157</address><time>20092236</time><flashver>FMLE/3.0 (compatible; Lavf56.40</flashver><dropped>0</dropped><avsync>-5</avsync><timestamp>35080010</timestamp><publishing/><active/></client>
+<meta><video><width>1920</width><height>1080</height><frame_rate>30</frame_rate><codec>H264</codec><profile>Baseline</profile><compat>192</compat><level>3.1</level></video><audio><codec>AAC</codec><profile>LC</profile><channels>2</channels><sample_rate>48000</sample_rate></audio></meta>
+<nclients>5</nclients>
+<publishing/>
+<active/>
+</stream>
+<stream>
+<name>PTI1</name>
+<time>65033861</time><bw_in>4432864</bw_in>
+<bytes_in>32277000004</bytes_in>
+<bw_out>4432864</bw_out>
+<bytes_out>32222189674</bytes_out>
+<bw_audio>3328</bw_audio>
+<bw_video>4395320</bw_video>
+<client><id>1045184</id><address>49.249.119.213</address><time>3543679</time><dropped>0</dropped><avsync>5</avsync><timestamp>65023404</timestamp><active/></client>
+<client><id>1043558</id><address>59.160.110.2</address><time>65026681</time><flashver>FMLE/3.0 (compatible; FMSc/1.0)</flashver><swfurl>rtmp://13.127.253.253/live</swfurl><dropped>0</dropped><avsync>5</avsync><timestamp>65023404</timestamp><publishing/><active/></client>
+<meta><video><width>1920</width><height>1080</height><frame_rate>30</frame_rate><codec>H264</codec><profile>High</profile><compat>0</compat><level>4.0</level></video><audio><codec>AAC</codec><profile>LC</profile><channels>2</channels><sample_rate>48000</sample_rate></audio></meta>
+<nclients>2</nclients>
+<publishing/>
+<active/>
+</stream>
+<stream>
+<name>PTI2</name>
+<time>65035133</time><bw_in>4404640</bw_in>
+<bytes_in>32602513341</bytes_in>
+<bw_out>4404640</bw_out>
+<bytes_out>32521661729</bytes_out>
+<bw_audio>3320</bw_audio>
+<bw_video>4401320</bw_video>
+<client><id>1045185</id><address>49.249.119.213</address><time>3543111</time><dropped>0</dropped><avsync>-11</avsync><timestamp>65027760</timestamp><active/></client>
+<client><id>1043556</id><address>182.76.43.41</address><time>65028049</time><flashver>FMLE/3.0 (compatible; FMSc/1.0)</flashver><swfurl>rtmp://13.127.253.253/live</swfurl><dropped>0</dropped><avsync>-11</avsync><timestamp>65027760</timestamp><publishing/><active/></client>
+<meta><video><width>1920</width><height>1080</height><frame_rate>25</frame_rate><codec>H264</codec><profile>High</profile><compat>0</compat><level>4.0</level></video><audio><codec>AAC</codec><profile>LC</profile><channels>2</channels><sample_rate>48000</sample_rate></audio></meta>
+<nclients>2</nclients>
+<publishing/>
+<active/>
+</stream>
+<stream>
+<name>ECS_ONE</name>
+<time>535128</time><bw_in>11224520</bw_in>
+<bytes_in>639881504</bytes_in>
+<bw_out>33673560</bw_out>
+<bytes_out>1160697359</bytes_out>
+<bw_audio>139096</bw_audio>
+<bw_video>11064352</bw_video>
+<client><id>1045397</id><address>49.249.119.220</address><time>21132</time><flashver>LNX 9,0,124,2</flashver><dropped>0</dropped><avsync>9</avsync><timestamp>1219065</timestamp><active/></client>
+<client><id>1045373</id><address>49.249.119.212</address><time>207672</time><dropped>0</dropped><avsync>9</avsync><timestamp>1219065</timestamp><active/></client>
+<client><id>1045372</id><address>49.249.119.211</address><time>214264</time><dropped>0</dropped><avsync>9</avsync><timestamp>1219065</timestamp><active/></client>
+<client><id>1045345</id><address>134.209.149.35</address><time>507220</time><flashver>FMLE/3.0 (compatible; FMSc/1.0)</flashver><dropped>0</dropped><avsync>9</avsync><timestamp>1219065</timestamp><publishing/><active/></client>
+<meta><video><width>1920</width><height>1080</height><frame_rate>0</frame_rate><codec>H264</codec><profile>High</profile><compat>0</compat><level>5.1</level></video><audio><codec>AAC</codec><profile>LC</profile><channels>2</channels><sample_rate>48000</sample_rate></audio></meta>
+<nclients>4</nclients>
+<publishing/>
+<active/>
+</stream>
+<stream>
+<name>ICC_ONE</name>
+<time>25808</time><bw_in>0</bw_in>
+<bytes_in>0</bytes_in>
+<bw_out>0</bw_out>
+<bytes_out>0</bytes_out>
+<bw_audio>0</bw_audio>
+<bw_video>0</bw_video>
+<client><id>1045396</id><address>49.249.119.220</address><time>26132</time><flashver>LNX 9,0,124,2</flashver><dropped>0</dropped><avsync>0</avsync><timestamp>0</timestamp></client>
+<nclients>1</nclients>
+</stream>
+<stream>
+<name>MAR_ONE</name>
+<time>27879807</time><bw_in>9646776</bw_in>
+<bytes_in>30922530035</bytes_in>
+<bw_out>28940344</bw_out>
+<bytes_out>91832930198</bytes_out>
+<bw_audio>145720</bw_audio>
+<bw_video>9501056</bw_video>
+<client><id>1045388</id><address>49.249.119.220</address><time>72328</time><flashver>LNX 9,0,124,2</flashver><dropped>0</dropped><avsync>0</avsync><timestamp>35079988</timestamp><active/></client>
+<client><id>1045259</id><address>49.249.119.212</address><time>2211295</time><dropped>0</dropped><avsync>0</avsync><timestamp>35079988</timestamp><active/></client>
+<client><id>1044102</id><address>49.249.119.211</address><time>27768399</time><dropped>0</dropped><avsync>0</avsync><timestamp>35079988</timestamp><active/></client>
+<client><id>1044096</id><address>172.105.34.23</address><time>27861699</time><flashver>FMLE/3.0 (compatible; Lavf56.40</flashver><dropped>0</dropped><avsync>0</avsync><timestamp>35079988</timestamp><publishing/><active/></client>
+<meta><video><width>1920</width><height>1080</height><frame_rate>50</frame_rate><codec>H264</codec><profile>High</profile><compat>0</compat><level>4.2</level></video><audio><codec>AAC</codec><profile>LC</profile><channels>2</channels><sample_rate>44100</sample_rate></audio></meta>
+<nclients>4</nclients>
+<publishing/>
+<active/>
+</stream>
+<stream>
+<name>playout1</name>
+<time>670656420</time><bw_in>0</bw_in>
+<bytes_in>0</bytes_in>
+<bw_out>0</bw_out>
+<bytes_out>0</bytes_out>
+<bw_audio>0</bw_audio>
+<bw_video>0</bw_video>
+<client><id>983243</id><address>147.135.54.107</address><time>670658636</time><flashver>LNX 9,0,124,2</flashver><dropped>0</dropped><avsync>0</avsync><timestamp>0</timestamp></client>
+<nclients>1</nclients>
+</stream>
+<nclients>26</nclients>
+</live>
+</application>
+</server>
+</rtmp>
